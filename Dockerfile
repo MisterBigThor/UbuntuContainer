@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:focal
 
 RUN apt-get update && apt-get install apt-utils -y --force-yes
 RUN apt-get upgrade -y --force-yes

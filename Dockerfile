@@ -48,6 +48,9 @@ RUN chown -R bic:bic /home/bic/.ssh
 EXPOSE 22
 EXPOSE 2222
 
+#=====User apps=====
+RUN apt-get install nano
+
 #=====Up script=====
 WORKDIR /
 COPY init.sh .

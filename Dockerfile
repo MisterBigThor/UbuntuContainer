@@ -45,6 +45,9 @@ RUN chmod 700 /home/bic/.ssh
 RUN chmod 600 authorized_keys
 RUN chown -R bic:bic /home/bic/.ssh
 
+EXPOSE 22
+EXPOSE 2222
+
 #=====Up script=====
 WORKDIR /
 COPY init.sh .

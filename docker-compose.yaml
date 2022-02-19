@@ -1,0 +1,41 @@
+version: '2.2'
+services:
+  machine00:
+    image: misterbigthor/ubuntu_mpi
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    hostname: correal-00
+    container_name: correal-00
+    expose:
+      - 22
+      - 2022
+    networks:
+      backend:
+        ipv4_address: 10.0.0.10
+    volumes:
+      - /share:/share
+
+  machine01:
+    image: misterbigthor/ubuntu_mpi
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    hostname: correal-01
+    container_name: correal-01
+    expose:
+      - 22
+      - 2022
+    networks:
+      backend:
+        ipv4_address: 10.0.0.11
+    volumes:
+      - /share:/share
+
+networks:
+  backend:
+    name: machines_private_network
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.0/8
+

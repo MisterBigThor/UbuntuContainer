@@ -7,9 +7,18 @@ Basic ubuntu container with the following packets:
 * nano
 
 ## Interactive run 
-
+````bash
+docker run -it ubuntu_mpi
+````
 
 ## Docker push
+````bash
+docker tag misterbigthor/ubuntu_mpi:latest your_tag
 
+docker push misterbigthor/ubuntu_mpi:your_tag
+````
 
 ## Docker compose example
+````bash
+docker-compose up
+````

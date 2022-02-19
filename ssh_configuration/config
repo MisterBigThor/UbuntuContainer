@@ -1,0 +1,11 @@
+Host correal-00
+    HostName correal-00
+    IdentityFile /home/pharmacelera/.ssh/id_1
+    StrictHostKeyChecking no
+    Port 2022
+
+Host correal-01
+    HostName correal-01
+    IdentityFile /home/pharmacelera/.ssh/id_1
+    StrictHostKeyChecking no
+    Port 2022
